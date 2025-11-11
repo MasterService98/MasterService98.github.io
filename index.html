@@ -14,21 +14,35 @@
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:var(--bg);color:#111;line-height:1.6;display:flex;flex-direction:column;align-items:center}
+    
     header.hero{
       width:100%;
-      height:300px;
-      background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('SAVE_20250926_112543.jpg') center/cover no-repeat;
-      background-color:var(--primary);
+      background:var(--primary);
+      color:#fff;
+      padding:40px 20px;
       display:flex;
-      flex-direction:column;
       justify-content:center;
       align-items:center;
-      text-align:center;
-      color:#fff;
+      flex-wrap:wrap;
+      gap:20px;
+      text-align:left;
     }
-    header.hero h1{font-size:26px;margin-bottom:6px}
-    header.hero p{font-size:16px;color:#e6eefb}
-    main{width:90%;max-width:900px;margin-top:-40px}
+    header.hero img{
+      width:140px;
+      height:auto;
+      border-radius:12px;
+      background:#fff;
+      padding:8px;
+      object-fit:contain;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    header.hero .text{
+      max-width:600px;
+    }
+    header.hero h1{font-size:24px;margin-bottom:6px}
+    header.hero p{font-size:15px;color:#e6eefb}
+
+    main{width:90%;max-width:900px;margin-top:-20px}
     section.card{
       background:var(--card);
       border-radius:12px;
@@ -42,12 +56,21 @@
     .proj{padding:10px;border-bottom:1px solid #eee}
     a{color:var(--primary);text-decoration:none}
     footer{text-align:center;color:var(--muted);font-size:14px;margin:20px 0}
+
+    /* Responsif */
+    @media (max-width:700px){
+      header.hero{flex-direction:column;text-align:center}
+      header.hero img{width:120px}
+    }
   </style>
 </head>
 <body>
   <header class="hero">
-    <h1>Service Elektronik Dan Sepeda Listrik Ngoro</h1>
-    <p>Service cepat, bergaransi, dan terpercaya</p>
+    <img src="logo.png" alt="Logo Master Service">
+    <div class="text">
+      <h1>Service Elektronik Dan Sepeda Listrik Ngoro</h1>
+      <p>Service cepat, bergaransi, dan terpercaya</p>
+    </div>
   </header>
 
   <main>
